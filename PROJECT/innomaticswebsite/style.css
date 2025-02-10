@@ -1,0 +1,222 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f70303;
+    color: white;
+    padding: 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/background.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 30px;
+    background-size: 90%;
+    position: relative;  /* Ensure the text can be layered */
+}
+
+#hero h1 {
+    color:#fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1; /* Ensures text is above the overlay */
+    background-color: rgba(40, 40, 40, 0.5);  /* Semi-transparent black background */
+    padding: 15px 30px;    /* Padding around the text */
+    border-radius: 5px;    /* Optional rounded corners */
+}
+
+
+
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cta-btn {
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+
+/* Courses Section */
+#courses {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+#courses h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.course h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.read-more {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px 0;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Blog Section */
+#blog {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.blog-preview {
+    margin: 20px 0;
+}
+
+.blog-preview h3 a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.blog-preview h3 a:hover {
+    color: #4CAF50;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
